@@ -1,4 +1,4 @@
-//creating database structure
+09/21/2022-2
 
 const db = new Dexie("Todo App");
 db.version(1).stores({ todos: "++id, todo" });
@@ -42,4 +42,5 @@ const deleteTodo = async (event, id) => {
   await db.todos.delete(id);
   await getTodos();
 };
+
 
